@@ -79,18 +79,19 @@ a{color:inherit;text-decoration:none}
 .overlay-mail{color:var(--wine);font-size:11px;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid var(--rose)}
 
 /* HERO */
-.hero{position:relative;height:100vh;min-height:660px;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;height:100vh;min-height:680px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:150px 56px 88px}
 .hero .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .hero iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
-.hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(79,13,31,.88) 0%,rgba(122,22,54,.62) 45%,rgba(79,13,31,.15) 100%)}
-.hero::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(79,13,31,.35) 0%,transparent 30%,transparent 70%,rgba(79,13,31,.55) 100%)}
-.hero-content{position:relative;z-index:2;padding:0 56px;max-width:760px}
-.eyebrow{font-size:10px;letter-spacing:.55em;text-transform:uppercase;color:var(--rose2);margin-bottom:26px;opacity:0;animation:fadeUp 1.2s var(--ease) .3s forwards}
-.hero h1{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(38px,5.4vw,68px);line-height:1.12;color:#fff;margin-bottom:30px;opacity:0;animation:fadeUp 1.2s var(--ease) .55s forwards}
-.hero h1 em{font-style:italic;background:linear-gradient(120deg,var(--rose2),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .h-name{font-size:11px;letter-spacing:.6em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:44px;opacity:0;animation:fadeUp 1.2s var(--ease) .8s forwards}
+.hero::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(79,13,31,.82) 0%,rgba(122,22,54,.22) 30%,rgba(122,22,54,.12) 55%,rgba(79,13,31,.45) 78%,rgba(79,13,31,.85) 100%)}
+.hero-top{position:relative;z-index:2;text-align:center;opacity:0;animation:fadeDown 1.1s var(--ease) .3s forwards}
+.hero-bottom{position:relative;z-index:2;text-align:center;max-width:840px;margin:0 auto}
+.eyebrow{font-size:10px;letter-spacing:.55em;text-transform:uppercase;color:var(--rose2);margin-bottom:0}
+.hero-bottom h1{font-family:var(--serif);font-weight:400;font-style:italic;font-size:clamp(32px,4.2vw,54px);line-height:1.15;color:#fff;margin-bottom:16px;opacity:0;animation:fadeUp 1.2s var(--ease) .5s forwards}
+.hero-bottom h1 em{font-style:italic;background:linear-gradient(120deg,var(--rose2),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-bottom .h-name{font-size:10px;letter-spacing:.55em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:32px;opacity:0;animation:fadeUp 1.2s var(--ease) .75s forwards}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp 1.2s var(--ease) 1s forwards}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:none}}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp 1.2s var(--ease) 1s forwards}
 .btn{display:inline-block;padding:16px 40px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;transition:all .45s var(--ease);cursor:pointer;border:none;font-weight:600;border-radius:999px}
 .btn-grad{background:var(--grad);color:#fff;box-shadow:0 10px 30px rgba(122,22,54,.35)}
 .btn-grad:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(196,94,122,.45)}
@@ -265,7 +266,7 @@ footer>*{position:relative}
   #nav .logo{width:150px}
   #nav.scrolled .logo{width:120px}
   section{padding:90px 24px}
-  .hero-content{padding:0 24px}
+  .hero{padding:120px 24px 70px}
   .wine-block{padding:60px 30px;border-radius:20px}
   .news-grid,.show-grid{grid-template-columns:1fr;gap:36px}
   .show-grid.alt .show-img{order:0}
@@ -320,8 +321,8 @@ footer>*{position:relative}
 <header class="hero">
   <div class="hero-bg" style="background-image:url('assets/DSC_2897.jpg')"></div>
   <iframe src="https://player.vimeo.com/video/1131507095?autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0" allow="autoplay; fullscreen" title="Dania Díaz"></iframe>
-  <div class="hero-content">
-    <div class="eyebrow">Ilusionista · Storyteller · Madrid</div>
+  <div class="hero-top"><div class="eyebrow">Ilusionista · Storyteller · Madrid</div></div>
+  <div class="hero-bottom">
     <h1>&ldquo;Toda buena magia<br>comienza con una <em>buena historia</em>&rdquo;</h1>
     <div class="h-name">Dania Díaz</div>
     <div class="hero-ctas">
@@ -329,7 +330,6 @@ footer>*{position:relative}
       <a href="espectaculos.html" class="btn btn-light">Ver espectáculos</a>
     </div>
   </div>
-  <div class="scroll-hint">Descubrir</div>
 </header>
 
 <section class="news" style="background:var(--cream)">
