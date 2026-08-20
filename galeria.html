@@ -35,7 +35,8 @@ a{color:inherit;text-decoration:none}
 /* NAV */
 #nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease)}
 #nav .logo{width:140px;transition:width .5s var(--ease);flex-shrink:0}
-#nav .logo img{width:100%;filter:drop-shadow(0 2px 14px rgba(79,13,31,.35))}
+#nav .logo img{width:100%;filter:drop-shadow(0 2px 14px rgba(79,13,31,.35));animation:breathe 4.5s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
 #nav.scrolled{background:rgba(255,253,251,.92);backdrop-filter:blur(14px);padding:11px 40px;box-shadow:0 4px 30px rgba(79,13,31,.08)}
 #nav.scrolled .logo{width:115px}
 .nav-links{display:flex;gap:20px;align-items:center;white-space:nowrap}
