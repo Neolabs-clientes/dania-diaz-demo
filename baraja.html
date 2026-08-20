@@ -33,19 +33,19 @@ a{color:inherit;text-decoration:none}
 @keyframes plLine{from{width:0}to{width:150px}}
 
 /* NAV */
-#nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:22px 56px;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease)}
-#nav .logo{width:190px;transition:width .5s var(--ease)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;transition:all .5s var(--ease)}
+#nav .logo{width:140px;transition:width .5s var(--ease);flex-shrink:0}
 #nav .logo img{width:100%;filter:drop-shadow(0 2px 14px rgba(79,13,31,.35))}
-#nav.scrolled{background:rgba(255,253,251,.92);backdrop-filter:blur(14px);padding:12px 56px;box-shadow:0 4px 30px rgba(79,13,31,.08)}
-#nav.scrolled .logo{width:150px}
-.nav-links{display:flex;gap:30px;align-items:center}
-.nav-links a{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#fff;transition:color .3s;position:relative;font-weight:500;text-shadow:0 1px 8px rgba(79,13,31,.5)}
+#nav.scrolled{background:rgba(255,253,251,.92);backdrop-filter:blur(14px);padding:11px 40px;box-shadow:0 4px 30px rgba(79,13,31,.08)}
+#nav.scrolled .logo{width:115px}
+.nav-links{display:flex;gap:20px;align-items:center;white-space:nowrap}
+.nav-links a{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#fff;transition:color .3s;position:relative;font-weight:500;text-shadow:0 1px 8px rgba(79,13,31,.5)}
 #nav.scrolled .nav-links a{color:var(--ink);text-shadow:none}
 .nav-links a:hover{color:var(--rose2)}
 #nav.scrolled .nav-links a:hover{color:var(--rose)}
 .nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:currentColor;transition:width .4s var(--ease)}
 .nav-links a:hover::after{width:100%}
-.cta-nav{border:1px solid rgba(255,255,255,.6);padding:10px 22px;border-radius:999px;color:#fff!important}
+.cta-nav{border:1px solid rgba(255,255,255,.6);padding:9px 18px;border-radius:999px;color:#fff!important}
 #nav.scrolled .cta-nav{border-color:var(--wine);color:var(--wine)!important}
 .cta-nav:hover{background:var(--grad);color:#fff!important;border-color:transparent;text-shadow:none}
 .burger{display:flex;flex-direction:column;gap:6px;background:none;border:none;padding:10px 4px;cursor:pointer;z-index:210}
@@ -57,13 +57,13 @@ a{color:inherit;text-decoration:none}
 .burger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 
 /* OVERLAY */
-.overlay{position:fixed;inset:0;z-index:150;background:rgba(255,253,251,.985);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:all .55s var(--ease)}
+.overlay{position:fixed;inset:0;z-index:150;background:rgba(255,253,251,.985);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:all .55s var(--ease);overflow-y:auto;-webkit-overflow-scrolling:touch}
 .overlay.open{opacity:1;visibility:visible}
-.overlay-inner{flex:1;display:flex;flex-direction:column;justify-content:center;padding:100px 48px 40px;max-width:900px;margin:0 auto;width:100%}
-.overlay-slogan{font-size:9.5px;letter-spacing:.5em;text-transform:uppercase;color:var(--rose);margin-bottom:44px;opacity:0;transition:all .6s var(--ease) .1s}
+.overlay-inner{flex:1;display:flex;flex-direction:column;justify-content:center;padding:80px 48px 40px;max-width:900px;margin:0 auto;width:100%;min-height:100%}
+.overlay-slogan{font-size:9.5px;letter-spacing:.5em;text-transform:uppercase;color:var(--rose);margin-bottom:34px;opacity:0;transition:all .6s var(--ease) .1s}
 .overlay.open .overlay-slogan{opacity:1}
-.overlay-nav{display:flex;flex-direction:column;gap:6px}
-.overlay-nav a{font-family:var(--serif);font-size:clamp(30px,5vw,46px);font-weight:500;color:var(--wine);padding:10px 0;border-bottom:1px solid rgba(196,94,122,.15);opacity:0;transform:translateY(22px);transition:all .6s var(--ease)}
+.overlay-nav{display:flex;flex-direction:column;gap:4px}
+.overlay-nav a{font-family:var(--serif);font-size:clamp(24px,4vw,38px);font-weight:500;color:var(--wine);padding:8px 0;border-bottom:1px solid rgba(196,94,122,.15);opacity:0;transform:translateY(22px);transition:all .6s var(--ease)}
 .overlay.open .overlay-nav a{opacity:1;transform:none}
 .overlay.open .overlay-nav a:nth-child(1){transition-delay:.12s}
 .overlay.open .overlay-nav a:nth-child(2){transition-delay:.18s}
